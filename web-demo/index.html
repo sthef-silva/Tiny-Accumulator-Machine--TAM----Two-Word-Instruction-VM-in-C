@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TAM — Web Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <h1>TAM — Web Demo</h1>
+    <p class="muted">Prototype demo – does not reflect final implementation or performance.</p>
+
+    <section class="grid">
+      <div class="panel">
+        <label for="program"><strong>Program</strong> <span class="muted">(one instruction per line)</span></label>
+        <textarea id="program" spellcheck="false">
+; Simple example: ACC = 5 + 3; if zero jump; halt
+LOAD 5
+ADD 3
+SUB 8
+JZ 7
+ADD 10
+JMP 8
+LOAD 0
+HALT
+        </textarea>
+
+        <div class="controls">
+          <button id="resetBtn">Reset</button>
+          <button id="stepBtn">Step</button>
+          <button id="runBtn">Run</button>
+          <label class="speed">Speed <input id="speed" type="range" min="50" max="800" value="250"></label>
+        </div>
+
+        <p class="muted small">Supported ops: <code>LOAD n</code>, <code>STORE addr</code>, <code>ADD n</code>, <code>SUB n</code>, <code>JMP addr</code>, <code>JZ addr</code>, <code>HALT</code>. Lines start at 1.</p>
+      </div>
+
+      <div class="panel">
+        <h2>CPU State</h2>
+        <div class="state">
+          <div>PC: <span id="pc">0</span></div>
+          <div>ACC: <span id="acc">0</span></div>
+          <div>Status: <span id="status">ready</span></div>
+        </div>
+
+        <h3>Memory</h3>
+        <pre id="mem" class="mem"></pre>
+
+        <h3>Trace</h3>
+        <pre id="trace" class="trace"></pre>
+      </div>
+    </section>
+  </main>
+
+  <script src="demo.js"></script>
+</body>
+</html>
