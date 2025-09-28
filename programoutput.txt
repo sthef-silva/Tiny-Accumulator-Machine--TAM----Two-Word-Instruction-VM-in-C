@@ -1,6 +1,6 @@
 //Program Output
 
-Enter file name: programoutput.txt
+Enter file name: elf.txt
 Would you like to see the state of the VM when executing the program? (yes/no): yes 
 
 PC = 0 | A = 0 | DM = [0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
