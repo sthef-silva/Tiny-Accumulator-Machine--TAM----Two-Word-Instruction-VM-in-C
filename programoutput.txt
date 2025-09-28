@@ -1,0 +1,154 @@
+//Program Output
+
+Enter file name: elf.txt
+Would you like to see the state of the VM when executing the program? (yes/no): yes 
+
+PC = 0 | A = 0 | DM = [0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+
+IN
+input value: 2
+
+PC = 2 | A = 2 | DM = [0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+
+SKIPL
+
+PC = 4 | A = 2 | DM = [0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+
+STORE
+
+PC = 6 | A = 2 | DM = [2, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+
+IN
+input value: 3
+
+PC = 8 | A = 3 | DM = [2, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+
+SKIPL
+
+PC = 10 | A = 3 | DM = [2, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+
+STORE
+
+PC = 12 | A = 3 | DM = [2, 3, 0, 0, 0, 0, 0, 0, 0, 1]
+
+LOAD
+
+PC = 14 | A = 0 | DM = [2, 3, 0, 0, 0, 0, 0, 0, 0, 1]
+
+ADD
+
+PC = 16 | A = 2 | DM = [2, 3, 0, 0, 0, 0, 0, 0, 0, 1]
+
+STORE
+
+PC = 18 | A = 2 | DM = [2, 3, 0, 0, 0, 0, 0, 2, 0, 1]
+
+LOAD
+
+PC = 20 | A = 3 | DM = [2, 3, 0, 0, 0, 0, 0, 2, 0, 1]
+
+SUB
+Subtracting 1 from AC, from address 9
+PC = 22 | A = 2 | DM = [2, 3, 0, 0, 0, 0, 0, 2, 0, 1]
+
+STORE
+
+PC = 24 | A = 2 | DM = [2, 2, 0, 0, 0, 0, 0, 2, 0, 1]
+
+SKIPZ
+
+PC = 26 | A = 2 | DM = [2, 2, 0, 0, 0, 0, 0, 2, 0, 1]
+
+JMP
+
+PC = 8 | A = 2 | DM = [2, 2, 0, 0, 0, 0, 0, 2, 0, 1]
+
+SKIPL
+
+PC = 10 | A = 2 | DM = [2, 2, 0, 0, 0, 0, 0, 2, 0, 1]
+
+STORE
+
+PC = 12 | A = 2 | DM = [2, 2, 0, 0, 0, 0, 0, 2, 0, 1]
+
+LOAD
+
+PC = 14 | A = 2 | DM = [2, 2, 0, 0, 0, 0, 0, 2, 0, 1]
+
+ADD
+
+PC = 16 | A = 4 | DM = [2, 2, 0, 0, 0, 0, 0, 2, 0, 1]
+
+STORE
+
+PC = 18 | A = 4 | DM = [2, 2, 0, 0, 0, 0, 0, 4, 0, 1]
+
+LOAD
+
+PC = 20 | A = 2 | DM = [2, 2, 0, 0, 0, 0, 0, 4, 0, 1]
+
+SUB
+Subtracting 1 from AC, from address 9
+PC = 22 | A = 1 | DM = [2, 2, 0, 0, 0, 0, 0, 4, 0, 1]
+
+STORE
+
+PC = 24 | A = 1 | DM = [2, 1, 0, 0, 0, 0, 0, 4, 0, 1]
+
+SKIPZ
+
+PC = 26 | A = 1 | DM = [2, 1, 0, 0, 0, 0, 0, 4, 0, 1]
+
+JMP
+
+PC = 8 | A = 1 | DM = [2, 1, 0, 0, 0, 0, 0, 4, 0, 1]
+
+SKIPL
+
+PC = 10 | A = 1 | DM = [2, 1, 0, 0, 0, 0, 0, 4, 0, 1]
+
+STORE
+
+PC = 12 | A = 1 | DM = [2, 1, 0, 0, 0, 0, 0, 4, 0, 1]
+
+LOAD
+
+PC = 14 | A = 4 | DM = [2, 1, 0, 0, 0, 0, 0, 4, 0, 1]
+
+ADD
+
+PC = 16 | A = 6 | DM = [2, 1, 0, 0, 0, 0, 0, 4, 0, 1]
+
+STORE
+
+PC = 18 | A = 6 | DM = [2, 1, 0, 0, 0, 0, 0, 6, 0, 1]
+
+LOAD
+
+PC = 20 | A = 1 | DM = [2, 1, 0, 0, 0, 0, 0, 6, 0, 1]
+
+SUB
+Subtracting 1 from AC, from address 9
+PC = 22 | A = 0 | DM = [2, 1, 0, 0, 0, 0, 0, 6, 0, 1]
+
+STORE
+
+PC = 24 | A = 0 | DM = [2, 0, 0, 0, 0, 0, 0, 6, 0, 1]
+
+SKIPZ
+
+PC = 28 | A = 0 | DM = [2, 0, 0, 0, 0, 0, 0, 6, 0, 1]
+
+LOAD
+
+PC = 30 | A = 6 | DM = [2, 0, 0, 0, 0, 0, 0, 6, 0, 1]
+
+OUT
+Final value is: 6
+
+PC = 32 | A = 6 | DM = [2, 0, 0, 0, 0, 0, 0, 6, 0, 1]
+
+HALT
+Program has ended
+
+PC = 34 | A = 6 | DM = [2, 0, 0, 0, 0, 0, 0, 6, 0, 1]
